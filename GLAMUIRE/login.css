@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+html, body {
+    height: 100%;  /* Ensures the html and body take up at least the full height of the viewport */
+    min-height: 100vh; /* vh (Viewport Height) is more reliable in some cases */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gruppo', sans-serif;
+    background-image: url('Backgrounds/LOGIN_BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content if needed */
+}
+
+.login-container h2 {
+	margin-top: 90px;
+    font-family: 'Marcellus', sans-serif;
+    font-weight: lighter;
+    font-size: 35px;
+	text-align: center;
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.login-container {
+    width: 33%;
+    height: 100vw;
+    margin: 1% auto;  /* Centers horizontally in the viewport, consider adjusting for smaller screens */
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the children elements horizontally */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group img {
+	width: 33px;
+    height: 20px; 
+    vertical-align: middle; 
+	position: absolute;
+	display: inline-block;
+	margin-left: 15%;
+	margin-top: 4px;
+	
+}
+
+.Web {
+    color: black;
+    font-weight: 100; 
+    font-size: 35px;
+    font-family: 'Gruppo', sans-serif; 
+}
+
+.Web img {
+    width: auto;
+    height: 45px; 
+    vertical-align: middle; 
+}
+
+input[type="text"], input[type="password"] {
+	font-family: 'Gruppo', sans-serif;
+    width: 100%;
+    padding: 10px;
+	border: 0px;
+    border-bottom: 2px solid #ccc;
+    border-radius: 10px;
+	background-color: transparent;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+	font-family: 'Gruppo', sans-serif;
+    color: #aaa;
+	background-color: transparent;	
+}
+
+.checkbox-holder {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    margin-left: 45px;
+    color: #aaa;
+}
+
+.checkbox-label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + .checkbox-label::before {
+    content: "\2713"; /* Unicode character for checkmark */
+    display: inline-block;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    color: #000;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+
+button {
+	font-family: 'Gruppo', sans-serif;
+    width: 100%; /* Ensures the button fills the width of its container */
+    padding: 15px 100px;
+    margin-top: 10px; /* Provides spacing above the button */
+    margin-left: 8px;
+    cursor: pointer;
+    border: 2px solid black;
+	border-radius: 30px;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}

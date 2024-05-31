@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Glamuiré - Glamour Skincare Shop</title>
+		<link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="con">
+
+<div class="nav" id="navbar">
+  <ul>
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+	<li class="Web"><img src="Designs/Logo.png">GLAMUIRÉ</li>
+    <li><a href="items.html">ITEMS</a></li>
+    <li><a href="contacts.html">CONTACT</a></li>
+	<li class="Web"><img src="Designs/Logout.png" alt="Logo" onclick="Out()"></li>
+  </ul>
+</div>
+<br>
+
+  <!----------- CONTACT BOX SECTION ----------->
+<div class="contact-container">
+        <div class="contact-left">
+		  <!----------- WEBSITE CONTACTS SECTION ----------->
+            <div class="contact-left-content">
+                <h2>Contact Us</h2>
+				  <p>Website Location: Metro Manila, Pasig City</p>
+					<p>Email: Glamuire.shopping@email.com</p>
+                <p>Feel free to reach out with any questions or concerns.</p>
+            </div>
+        </div>
+		 <!----------- END OF WEBSITE CONTACTS SECTION ----------->
+		 
+		  <!----------- CUSTOMER CONCERN SECTION ----------->
+    <div class="contact-right">
+	<p>Reach us out and put your concerns in our Contact form!</p>
+	<form onsubmit="return showAlert(event)">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="text" name="street" placeholder="Street Address" required><br>
+            <input type="text" name="contact" placeholder="Email/Phone" required><br>
+			<input type="text" name="message" placeholder="Message" required><br>
+            <input type="submit" value="Send">
+      </form>
+    </div>
+		<!----------- END OF CUSTOMER CONCERN SECTION ----------->
+</div>
+	<!----------- END OF CONTACT BOX SECTION ----------->
+<div class="footer">
+   <p>&copy; 2024 Glamuiré Skincare Shop. All rights Reserved.</p>
+</div>
+    <script src="FUNC.js"></script>
+</body>
+</html>

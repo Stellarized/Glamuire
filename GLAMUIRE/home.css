@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.category table {
+    width: 98%;
+    border-spacing: 20px;
+    table-layout: fixed;
+    padding: 20px;
+}
+
+.category th {
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.category td {
+    width: 20%;
+    height: 100px;
+    padding: 0px 10px 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.category a {
+    text-decoration: none;
+    color: black;
+}
+
+.category a:hover {
+    text-decoration: none;
+}
+
+.category td:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: white;
+    transition: transform 0.5s ease;
+}
+
+.product:hover img {
+   transform: scale(1.05);
+}
+
+.product {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.product:hover, .product:hover p {  
+    display: block;
+}
+
+.box:hover {
+    opacity: 0.7;
+}
+
+.product p {
+    display: none;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', Sans-serif;
+    font-size: 40px;
+    color: black;
+    position: absolute;
+    margin-top: 30%;
+    font-weight: bold;
+}
+
+.category {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Backgrounds/CAT_BG.png');
+    text-align: left;
+    color: black;
+	margin-top: -82px;
+}
+
+.category h2 {
+    font-family: 'Marcellus', Sans-serif;
+    color: black;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.tag p {
+    font-family: 'Marcellus', Sans-serif;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    justify-content: center;
+    margin-right: 8%;
+}
+
+.tag {
+    width: 100%;
+    height: 45vh;
+    background-size: contain;
+    background-image: url('Backgrounds/TAG_BG.png');
+    background-repeat: no-repeat;
+	margin-top: -40px;
+	opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.tag.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sales {
+    width: 100%;
+    height: 100vh;
+    margin-top: -10px;
+    background-size: cover;
+    background-image: url('Backgrounds/SALES_BG.gif');
+	margin-top: -72px;
+}
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Backgrounds/HOME_BG.png');
+    text-align: left;
+    color: white;
+}
+
+.main-content h1 {
+    font-family: 'Marcellus', Sans-serif;
+    font-weight: lighter;
+    font-size: 120px;
+    margin-top: 0;
+    margin-left: 85px;  
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-family: 'Gruppo', Sans-serif;
+    margin-left: 130px;  
+    top: 55%;
+    font-size: 19px;
+}
+
+/* Animation for the texts */
+.main-content h1, .main-content p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Styles when h1 and p are visible */
+.main-content.visible h1, .main-content.visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.btn_item {
+    font-family: 'Gruppo', sans-serif;
+    width: 15%;
+    padding: 5px 100px;  
+    margin-left: 10%;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.btn_item .arr {
+    margin-top: 4px;
+    margin-left: 25%;
+    position: absolute;
+    transition: 0.3s;
+}
+
+button:hover .arr {
+    margin-left: 30%;
+    transition: 0.3s;
+}
+
+.btn_about {
+    font-family: 'Gruppo', sans-serif;
+    width: 20%;
+    padding: 5px 100px;  
+    margin-left: 35%;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.btn_about .arr2 {
+    margin-top: 4px;
+    margin-left: 40%;
+    position: absolute;
+    transition: 0.3s;
+}
+
+button:hover .arr2 {
+    margin-left: 45%;
+    transition: 0.3s;
+}
+
+button:hover {
+    border: 3px solid #55552E;
+    background-color: transparent;
+    color: white;
+}
+
+/*ABOUT CONTENT CSS SECTION*/
+
+.about-content {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Backgrounds/ABOUT_BG.png');
+    text-align: justify;
+    color: black;
+}
+
+.animate-header {
+    font-family: 'Marcellus', sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 85px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-paragraph {
+    font-family: 'Gruppo', sans-serif;
+    margin-left: 100px;
+    font-size: 23px;
+    width: 38%;
+    text-indent: 5%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+
+.about-content h1 {
+    font-family: 'Marcellus', Sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 85px;  
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-family: 'Gruppo', Sans-serif;
+    margin-left: 100px;  
+    top: 55%;
+    font-size: 23px;
+    width: 38%;
+    text-indent: 5%;
+}
+
+.benefits {
+    width: 100%;
+    height: 130vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Backgrounds/BENEFITS_BG.png');
+    text-align: left;
+    color: black;
+}
+
+.benefits table {
+    width: 100%;
+    border-spacing: 30px;
+    table-layout: fixed;
+    padding: 0;
+}
+
+.ben img {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65%;
+}
+
+.benefits th {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Gruppo', Sans-serif;
+}
+
+.benefits td {
+    width: 100%;
+    height: 100px;
+    font-family: 'Gruppo', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    align-content: center;
+}
+
+.border {
+    width: 20%;
+    height: 35%;
+    position: absolute;
+    background: linear-gradient(to right bottom, #566552, #23311F, #40513D);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.inner {
+    margin-top: -3px;
+    height: 85%;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.video {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-video {
+    width: 25%;
+    height: auto;
+    position: relative;
+}
+
+.left-video {
+    margin-right: auto;
+}
+
+.right-video {
+    margin-left: auto;
+}
+
+.side-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Marcellus', sans-serif;
+	font-size: 20px;
+}
+
+.content img {
+	display: inline-block;
+	height: 60px;
+	width: 120px;
+	vertical-align: middle; 
+}
+
+.content h1 {
+	font-family: 'Gruppo', Sans Serif;
+	font-size: 65px;
+	font-weight: lighter;
+}
+
+.content h1, .content p {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content.visible h1, .content.visible p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.team {
+    width: 100%;
+	margin-top: 0;
+    padding: 20px;
+    text-align: center;
+	background-size: cover;
+    background-position: center;
+	background-image: url('Backgrounds/KNOW_BG.png');	
+}
+
+.team p {
+    font-family: 'Gruppo', sans-serif;
+    font-size: 23px;
+    color: black;
+    margin-bottom: 69px;
+}
+
+.team-member p {
+    font-family: 'Gruppo', sans-serif;
+    font-size: 23px;
+    color: black;
+    margin-bottom: 10px;
+	width: 30%;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.team-member h3 {
+    font-family: 'Marcellus', sans-serif;
+    font-size: 28px;
+    color: black;
+    margin: 5px 0;
+
+}
+
+.team-member p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+	width: 20%;
+	margin-bottom: 6%;
+}
+
+.testimonials-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+	font-family: 'Marcellus', sans-serif;
+	font-size: 15px;
+}
+
+.testimonials-section p {
+    font-family: 'Gruppo', sans-serif;
+    font-size: 23px;
+    color: black;
+	text-align: center;  
+	margin-bottom: 40px;
+}
+
+.testimonial-group {
+	position: relative;
+    margin-left: -500px; 
+	display: inline-block;
+	width: 75%;
+	text-align: right;
+	text-indent: 10px;
+}
+
+.testimonial-group2 {
+	position: absolute;
+    margin-left: 350px; 
+	width: 50%;
+	text-align: right;
+	text-indent: 10px;
+}
+
+blockquote {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #555;
+    background-color:#D9DED8;
+    border-left: 10px solid #5D562E;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    position: relative;
+    quotes: "“" "”";
+}
+
+blockquote p {
+    display: inline;
+}
+
+blockquote:before {
+    content: open-quote;
+    font-size: 4em;
+    color: #5D562E;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+blockquote footer {
+    font-family: 'Marcellus', sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .testimonials-section {
+        width: 60%;
+    }
+
+    blockquote {
+        width: 60%;
+    }
+}
+
+/* CONTACTS CSS SECTION */
+.con {
+    background-size: cover;
+    background-position: center;
+    background-image: url('Backgrounds/CONTACT_BG.png');
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separates left and right sections */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 3px 6px 6px rgba(0, 0.5, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px; 
+    margin-bottom: 305px;
+	font-family: 'Gruppo', san-serif;
+}
+
+.contact-left {
+    flex: 1;
+    padding: 20px;
+	height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Designs/Contacts.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.contact-left-content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-right form input[type="text"],
+.contact-right form input[type="email"],
+.contact-right form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-right form input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+	cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.contact-right form input[type="submit"]:hover {
+    background-color: white;
+	color: black;
+	 border: 1px solid #55552E;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Change to column layout on smaller screens */
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%; /* Make left and right sections take full width */
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}

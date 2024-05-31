@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Mango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    overflow-x: hidden; /* Disable horizontal overflow */
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Backgrounds/SHOP_BG.png');
+}
+
+.container {
+    width: 100%; 
+    max-width: 100%; 
+    margin: auto;
+    text-align: center;
+}
+
+/* SELLING PRODUCT SECTION*/
+
+.content {
+    padding: 20px;
+}
+
+table {
+    width: 98%; 
+    border-spacing: 20px;
+    table-layout: fixed; 
+    padding: 20px; 
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin-bottom: 25px;
+}
+
+th {
+    text-align: center;
+    padding: 10px;
+	font-family: 'Gruppo', sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+td {
+    width: 100%; 
+	border-radius: 15px;
+    height: 200px;
+    padding: 0px 10px 18px;
+	font-family: open sans;
+	text-align: center;
+	transition: transform 0.5s;
+}
+
+td:hover {
+	transform: translateY(-10px);
+	background-color: #b58d2f;	
+}
+
+.price-container {
+	margin-top: 45px;
+	display: inline-block;
+	margin-right: 45%;
+}
+
+.product img {
+	width: 50%; 
+    max-height: 65%; 
+}
+
+.product {
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    text-align: center;
+    height: 100%; 
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+	background-color: white;
+	width: 100%;
+	border-radius: 15px;
+}
+
+.price {
+	 color: black;
+	 font-size: 16px;
+	 position: absolute;
+}
+
+.button {
+    width: 100%; 
+    padding: 10px 20px; 
+    margin-top: 10px; 
+	margin-right: 90px;
+	margin-left: 100%;
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    border: 2px solid black; 
+    background-color: transparent; 
+    color: black; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+	font-size: 10px;
+	border-radius: 30px;
+}
+
+.button:hover {
+    background-color: black; 
+    color: white;
+}
+
+/* ADD-TO-CART SECTION */
+
+
+body .showCart .cartTab {
+	inset: 0 0 0 auto;
+}
+
+body .showCart .container {
+	transform: translateX(-250px);
+}
+
+.icon-cart img {
+	position: relative;
+	margin-top: 0px;
+	margin-left: 30%;
+	margin-right: 100px;
+	display: inline-block;
+	width: 55px;
+}
+
+.itemcount {
+	width: 26px;
+	height: 24px;
+	display: inline;
+	color: white;
+	background-color: #b58d2f;
+	border-radius: 100%;
+	position: fixed;
+	font-size: 20px;
+	top: 40px;
+	right: 305px;
+	text-align: center;
+}
+
+.cartTab {
+	height: 85%;
+	width: 400px;
+	background-color: #362f2b;
+	color: white;
+	position: fixed;
+	margin-top: 6%;
+	top: -6px;
+	right: -400px;
+	bottom: 0;
+	font-family: 'Gruppo', sans-serif;
+	display: grid;
+	grid-template-rows: 70px 1fr 70px; 
+	z-index: 10;
+}
+
+.cartTab .listCart .itemvariables{
+	display: grid;  
+    padding: 15px 0;
+    grid-template-columns: 70px 60px 70px 50px 50px;
+    gap: 20px; /*for grid*/
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.cartitemimg img{
+	width: 100%;
+}
+
+.increment{
+	width: 20px;
+	height: 20px;
+	border-radius: 50px;
+}
+
+.decrement{
+	width: 20px;
+	height: 20px;
+	border-radius: 50px;
+}
+
+.c_itemprice{
+	text-align: left;
+}
+
+.del img{
+	width: 25px;
+}
+
+.c_itemname{
+	font-size: 12px;
+}
+
+.t_container span{
+	color: #b58d2f;
+	z-index: 11;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+	top: 1%;
+	left: 3%;
+}
+
+.total{
+	padding: 0px 5px;
+}
+
+body.carttrigger .cartTab{
+	right: 0px;
+}
+
+.cartTab h1 {
+	text-align: center;	
+}
+
+.cartTab .Btn button {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	align-items: center;
+	position: fixed;
+	top: 94%;
+	padding: 10px;
+	width: 28%;
+	font-size: 25px;
+	font-family: 'Gruppo', sans-serif;
+}
+
+.listCart .quantity { 
+	padding: 0;
+	margin-left: -20px;
+}
+
+.listCart .quantity span {
+	display: inline-block;
+	padding: 0;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	border-radius: 50%;
+	color: black;
+	cursor: pointer;
+}
+
+.listCart {
+    max-height: 500px; 
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+    padding: 5px; 
+	width: 410px;
+}
+
+.listCart .pro ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.listCart .pro ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.listCart .pro ul li:last-child {
+    border-bottom: none;
+}
+
+.pro {
+    background-color: transparent;
+    padding: 8px 0;
+    top: 0;
+}
+
+.pro ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.pro ul li {
+    padding: 8px 15px;
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+/* CHECKOUT POPOUT SECTION*/
+
+.checkout-popup {
+    display: none; /* Initially hidden */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* High z-index to ensure it appears above other content */
+}
+
+.checkout-popup.active {
+    display: block; /* Show when active */
+}
+
+.checkout-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    margin: 100px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001; /* Ensure it appears above the semi-transparent background */
+    text-align: center;
+}
+
+.checkout-content h2 {
+    margin-top: 0;
+    font-family: 'Gruppo', sans-serif;
+    font-size: 30px;
+    color: #333;
+}
+
+.checkout-content p {
+    font-size: 18px;
+    color: #555;
+}
+
+.checkout-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.checkout-content button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-content button:hover {
+    background-color: #555;
+}
+

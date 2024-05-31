@@ -2,7 +2,7 @@
 A market shopping place for skincare products and routine. Please check the tag option to see the website .zip file and for more informations, thank you.
 
 
-Email: shantelle.sotelo2804@gmail.com
+Email: glamuire.shop@email.com
 
 Password: 1234
 

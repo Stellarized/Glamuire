@@ -34,7 +34,7 @@ function LogIn(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    if (username == "shantelle.sotelo2804@gmail.com" && password == "1234"){
+    if (username == "glamuire.shop@email.com" && password == "1234"){
         window.location.href = "home.html";
         return true;
     } else {
